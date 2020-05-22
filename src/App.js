@@ -14,14 +14,13 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import Hero from './components/Hero'
 
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      title : 'Anshumant Sagar',
+      title : 'Anshumant\'s Portfolio',
       headerLinks : [
         { title: 'home', path : '/'},
         { title: 'about', path : '/about'},
@@ -29,7 +28,8 @@ class App extends Component {
       ],
       home : {
         title: 'Be Brave',
-        subtitle: 'Keep Learning Keep Improving'
+        subTitle: 'Keep Learning Keep Improving',
+        text: 'Check Out Few Of My Creations Below'
       },
       about : {
         title: 'About Me'
@@ -45,7 +45,7 @@ class App extends Component {
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Anshumant</Navbar.Brand>
+            <Navbar.Brand>{this.state.title}</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toogle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
